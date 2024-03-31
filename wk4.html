@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <!-- External JavaScript libraries -->
+    <script src="library1.js"></script>
+    <script src="library2.js"></script>
+    <script>
+        function isJName(name) {
+            return name.charAt(0).toLowerCase() === 'j'; // Vérifie si le premier caractère du nom est 'j' ou 'J'
+        }
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var names = ["jinan", "benin", "Joe", "imane", "jaylane"];
+            var outputContainer = document.getElementById("output");
+            for (var i = 0; i < names.length; i++) {
+                var name = names[i];
+                var message;
+                if (isJName(name)) {
+                    message = "Goodbye " + name;
+                } else {
+                    message = "Hello " + name;
+                }
+                outputContainer.innerHTML += "<p>" + message + "</p>";
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Output will be displayed here -->
+    <div id="output"></div>
+</body>
+</html>
